@@ -31,20 +31,8 @@ public class ProductController {
 
     //ajouter un produit
     @PostMapping(value = "/Produits")
-    public ResponseEntity<Void> ajouterProduit(@RequestBody Product product) {
-
-        Product productAdded =  productDao.save(product);
-
-        if (productAdded == null)
-            return ResponseEntity.noContent().build();
-
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(productAdded.getId())
-                .toUri();
-
-        return ResponseEntity.created(location).build();
+    public void ajouterProduit(@RequestBody Product product) {
+        productDao.save(product);
     }
 
     @DeleteMapping (value = "/Produits/{id}")

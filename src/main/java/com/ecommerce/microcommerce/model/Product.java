@@ -13,10 +13,16 @@ public class Product {
     private String nom;
     private int prix;
 
-    @JsonIgnore
+    //@JsonIgnore
     private int prixAchat;
 
     public Product() {
+    }
+
+    public Product(int id,String nom,int prix){
+        this.id=id;
+        this.nom=nom;
+        this.prix=prix;
     }
 
     public Product(int id, String nom, int prix, int prixAchat) {
