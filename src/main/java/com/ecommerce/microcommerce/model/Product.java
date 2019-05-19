@@ -14,7 +14,8 @@ public class Product {
     private int prix;
 
     //@JsonIgnore
-    private int prixAchat;
+    //private int prixAchat;
+    private int stock;
 
     public Product() {
     }
@@ -29,7 +30,7 @@ public class Product {
         this.id=id;
         this.nom=nom;
         this.prix=prix;
-        this.prixAchat=prixAchat;
+        //this.prixAchat=prixAchat;
     }
 
     public int getId() {
@@ -56,13 +57,21 @@ public class Product {
         this.prix = prix;
     }
 
-    public int getPrixAchat() {
-        return prixAchat;
+    //public int getPrixAchat() {
+    //    return prixAchat;
+    //}
+
+    //public void setPrixAchat(int prixAchat) {
+    //    this.prixAchat = prixAchat;
+
+    public int getStock() {
+        return stock;
     }
 
-    public void setPrixAchat(int prixAchat) {
-        this.prixAchat = prixAchat;
+    public void setStock(int stock) {
+        this.stock = stock;
     }
+    //}
 
     @Override
     public String toString() {

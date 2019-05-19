@@ -23,10 +23,16 @@ public class ProductController {
     public List<Product> listeProduits() {
         return productDao.findAll();
     }
+
     @GetMapping(value = "/Produits/{id}")
     public Product afficherUnProduit(@PathVariable int id) {
         return productDao.findById( id);
 
+    }
+
+    @GetMapping(value = "/Produits/Stock")
+    public List<Product> afficherLeStock() {
+        return productDao.findByStockGreaterThan(0);
     }
 
     //ajouter un produit
