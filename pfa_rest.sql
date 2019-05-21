@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 19, 2019 at 05:08 AM
+-- Generation Time: May 21, 2019 at 07:06 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `hibernate_sequence` (
 --
 
 INSERT INTO `hibernate_sequence` (`next_val`) VALUES
-(4);
+(5);
 
 -- --------------------------------------------------------
 
@@ -62,9 +62,10 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`id`, `nom`, `prix`, `stock`) VALUES
-(1, 'pc', 350, 100),
-(2, 'télévision', 500, 20),
-(3, 'table', 45, 300);
+(1, 'table', 45, 300),
+(2, 'chaise', 20, 1500),
+(3, 'TV', 150, 30),
+(4, 'Pc portable', 600, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
